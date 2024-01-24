@@ -1,0 +1,89 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(90deg, rgba(9, 121, 94, 1) 40%, rgba(0, 212, 255, 1) 100%); */
+    background: url(./images/clock3.jpeg);
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.hero h1 {
+    padding-top: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+    animation: fadeInUp 1s ease-out;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+}
+
+.wrapper {
+    width: 420px;
+    height: 110px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3B, #ff00e0);
+    border-radius: 4px;
+    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s ease-in-out; /* Hover transition */
+    border-radius: 15px;
+}
+
+.wrapper:hover {
+    transform: scale(1.05); /* Hover effect - slightly larger */
+}
+
+.wrapper .clock {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 405px;
+    height: 95px;
+    background: rgb(1, 43, 57);
+    transition: background 0.3s ease-in-out; /* Hover transition */
+}
+
+.wrapper:hover .clock {
+    background: rgb(1, 63, 77); /* Hover effect - color change */
+}
+
+.clock #time {
+    font-size: 65px;
+    color: white;
+    padding: 12px;
+    transition: font-size 2s ease-in-out, color 2s ease-in-out;
+  
+}
+
+.wrapper:hover .clock #time {
+    font-size: 70px; /* Hover effect - slightly larger font */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
